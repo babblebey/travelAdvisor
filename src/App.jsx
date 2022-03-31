@@ -3,7 +3,7 @@ import { Header, Map, Sidebar } from "./components"
 import { MainContext } from "./context/MainContext"
 
 const App = () => {
-  const { places, coordinates, setCoordinates, bounds, setBounds } = useContext(MainContext);
+  const { places, coordinates, setCoordinates, setBounds } = useContext(MainContext);
 
   return (
     <div className="w-full flex flex-wrap-reverse md:flex-nowrap md:h-screen">

@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useContext } from "react";
 import PlaceDetails from "./PlaceDetails";
+import { MainContext } from "../context/MainContext";
 
 const Sidebar = ({ places }) => {
-    const [rating, setRating] = useState('');
-    const [type, setType] = useState('');
+    const { rating, setRating, type, setType } = useContext(MainContext);
 
     return ( 
         <div className="w-full p-2">

@@ -11,7 +11,7 @@ const options = {
     },
     headers: {
       'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com',
-      'X-RapidAPI-Key': 'f93c4349f2mshc013ab6964bca9ap1b04d2jsna3010d9dca5a'
+      'X-RapidAPI-Key': 'a2a854c193msh6b3b744a6856009p165adfjsn28164ba8122d'
     }
   };
 
