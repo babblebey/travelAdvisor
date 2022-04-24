@@ -7,6 +7,7 @@ import { Navbar, Review } from "../../components";
 import ReactStarsRating from 'react-awesome-stars-rating';
 import { Loader, PlaceDetailsLoader } from "../../components/loaders";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const PlaceDetails = () => {
     const { type, id } = useParams();
@@ -33,7 +34,21 @@ const PlaceDetails = () => {
             { !place ? (
                 <PlaceDetailsLoader />
             ) : (
-                <>                
+                <>  
+                    <div className="border-b w-full h-fit flex justify-between items-center sticky top-0 bg-white z-20">
+                        <div className="container mx-auto px-4">
+                            <Link to={`/${type}`}>
+                                <div className="w-fit border-r py-3 pl-3 pr-3 md:pl-0 md:pr-4 cursor-pointer flex item-center">
+                                    <svg className="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                                    </svg>
+                                    <p>
+                                        Back to all { type }
+                                    </p>
+                                </div>
+                            </Link>
+                        </div>
+                    </div>              
                     <div className="container mx-auto px-4 pt-4">
                         <h1 className="font-bold text-lg md:text-[35px] my-2 md:my-4">
                             { place.name }
