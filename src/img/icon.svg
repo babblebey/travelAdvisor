@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="2000px" height="2000px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 2000 2000"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#201E1E;stroke-width:3.99922;stroke-linecap:round;stroke-linejoin:round}
+    .fil0 {fill:#00AFEF}
+    .fil1 {fill:black}
+    .fil2 {fill:#020202}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_316956912">
+   <circle class="fil0" cx="1000" cy="1000" r="989"/>
+   <g>
+    <g>
+     <g>
+      <g>
+       <path class="fil1 str0" d="M1436 624c-3,-1 -6,-1 -10,-1l-214 0 -21 -9c-60,-28 -126,-42 -191,-42 -65,0 -131,14 -191,42l-21 9 -214 0c-3,0 -7,0 -10,1 210,29 373,209 373,428 0,60 -13,118 -36,170l0 0c62,-31 135,-31 197,0l0 0c-22,-52 -35,-110 -35,-170 0,-219 163,-399 373,-428z"/>
+      </g>
+      <g>
+       <path class="fil1 str0" d="M1495 675c-208,0 -377,169 -377,377 0,207 169,376 377,376 208,0 377,-169 377,-377 0,-208 -169,-376 -377,-376zm0 633c-142,0 -257,-115 -257,-257 0,-142 115,-257 257,-257 142,0 257,116 257,258 0,142 -115,256 -257,256z"/>
+      </g>
+      <g>
+       <path class="fil1 str0" d="M505 675c-208,0 -377,168 -377,376 0,208 169,377 377,377 208,0 377,-169 377,-377 0,-208 -169,-376 -377,-376zm0 633c-142,0 -257,-115 -257,-257 0,-142 115,-257 257,-257 142,0 257,116 257,258 0,142 -115,256 -257,256z"/>
+      </g>
+     </g>
+     <g>
+      <path class="fil2 str0" d="M340 1063c-14,0 -25,-11 -25,-25 0,-99 81,-179 179,-179 14,0 25,12 25,25 0,14 -11,25 -25,25 -71,0 -129,58 -129,130 0,13 -11,24 -25,24z"/>
+     </g>
+     <g>
+      <path class="fil2 str0" d="M1666 1063c-14,0 -25,-11 -25,-25 0,-71 -58,-129 -130,-129 -14,0 -25,-11 -25,-25 0,-14 11,-25 25,-25 99,0 179,80 179,179 1,14 -10,25 -24,25z"/>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

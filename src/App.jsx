@@ -1,24 +1,35 @@
-import { useContext } from 'react'
-import { Header, Map, Sidebar } from "./components"
-import { MainContext } from "./context/MainContext"
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import { Home, HotelsList, MapView, RestaurantsList, AttractionsList, SearchResult } from "./pages";
+import { PlaceDetails } from "./pages/templates";
 
 const App = () => {
-  const { places, coordinates, setCoordinates, setBounds } = useContext(MainContext);
-
   return (
-    <div className="w-full flex flex-wrap-reverse md:flex-nowrap md:h-screen">
-      <div className="h-auto md:h-full w-full md:w-[35%] lg:w-[23%] md:overflow-y-scroll"> 
-        <Sidebar places={places}  />
-      </div>
-      <div className="h-[50vh] md:h-full w-full md:w-[65%] lg:w-[79%] relative">
-        <Header />
-        <Map 
-          setBounds={setBounds}
-          setCoordinates={setCoordinates}
-          coordinates={coordinates}
-        />
-      </div>
-    </div>
+    <>
+      <Switch>
+        <Route exact path={"/"}>
+          <Home />
+        </Route>
+        <Route path={"/map"}>
+          <MapView />
+        </Route>
+        <Route exact path={"/restaurants"}>
+          <RestaurantsList />
+        </Route>
+        <Route exact path={"/hotels"}>
+          <HotelsList />
+        </Route>
+        <Route exact path={"/attractions"}>
+          <AttractionsList />
+        </Route>
+        <Route path={"/search"}>
+          <SearchResult />
+        </Route>
+        <Route path={"/:type/:id"}>
+          <PlaceDetails />
+        </Route>
+      </Switch>
+    </>
   )
 }
 
