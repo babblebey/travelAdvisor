@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to travelAdvisor 👋</h1>
+# Welcome to travelAdvisor 👋
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://twitter.com/babblebey" target="_blank">
@@ -8,7 +8,7 @@
 
 > A ReactJS TripAdvisor Clone Web App made with the RapidAPI's TravelAdvisor API and Google Maps API
 
-### ✨ [Demo](https://traveladvisor-bey.netlify.app/)
+### ✨ [Live Preview](https://traveladvisor-bey.netlify.app/)
 
 ## Install
 Run the Command to Install all dependencies.
