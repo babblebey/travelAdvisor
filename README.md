@@ -20,10 +20,10 @@ npm install
 
 Create API Credentials/Keys from the following Providers
 
-* [Google Maps](https://console.cloud.google.com/) "Specifically: Maps Javascript API & Places API"
+* [Google Maps](https://console.cloud.google.com/) "Enabling the Specific Services: Maps Javascript API & Places API"
 * [Travel Advisor (Rapid API)](https://rapidapi.com/apidojo/api/travel-advisor/)
 
-Create a `.env` file as seen below filling your API Keys appropriately
+Create a `.env` file in your root directory, create the variables as seen below filling in your API Keys appropriately
 ```sh
 VITE_TRAVEL_API_KEY=TRAVEL-ADVISOR-APIKEY-HERE
 VITE_GOOGLE_MAP_API_KEY=GOOGLE-MAP-APIKEY-HERE
