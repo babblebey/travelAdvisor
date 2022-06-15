@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> A ReactJS TripAdvisor Clone Web App made with the RapidAPI's TravelAdvisor API and Google Maps API
+A ReactJS TripAdvisor Clone Web App made with the RapidAPI's TravelAdvisor API and Google Maps API
 
 ### ✨ [Live Preview](https://traveladvisor-bey.netlify.app/)
 
