@@ -1,3 +1,5 @@
+![travelAdvisor Screenshot](https://i.ibb.co/WBNyy3Q/screenshot-traveladvisor-bey-netlify-app-2022-06-15-14-43-15.png)
+
 # Welcome to travelAdvisor 👋
 
 A ReactJS TripAdvisor Clone Web App made with the RapidAPI's TravelAdvisor API and Google Maps API
