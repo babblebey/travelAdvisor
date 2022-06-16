@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 <h1 align="center">Welcome to travelAdvisor 👋</h1>
+=======
+# Welcome to travelAdvisor 👋
+
+![travelAdvisor Screenshot](https://i.ibb.co/WBNyy3Q/screenshot-traveladvisor-bey-netlify-app-2022-06-15-14-43-15.png)
+
+A ReactJS TripAdvisor Clone Web App made with the RapidAPI's TravelAdvisor API and Google Maps API
+
+>>>>>>> ec29f42412cb1698f3e2a7ab8724f1d0703a7439
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://twitter.com/babblebey" target="_blank">
@@ -6,9 +15,14 @@
   </a>
 </p>
 
+<<<<<<< HEAD
 > A ReactJS TripAdvisor Clone Web App made with the RapidAPI's TravelAdvisor API and Google Maps API
 
 ### ✨ [Demo](https://traveladvisor-bey.netlify.app/)
+=======
+
+### ✨ [Live Preview](https://traveladvisor-bey.netlify.app/)
+>>>>>>> ec29f42412cb1698f3e2a7ab8724f1d0703a7439
 
 ## Install
 Run the Command to Install all dependencies.
@@ -20,10 +34,17 @@ npm install
 
 Create API Credentials/Keys from the following Providers
 
+<<<<<<< HEAD
 * [Google Maps](https://console.cloud.google.com/) "Specifically: Maps Javascript API & Places API"
 * [Travel Advisor (Rapid API)](https://rapidapi.com/apidojo/api/travel-advisor/)
 
 Create a `.env` file as seen below filling your API Keys appropriately
+=======
+* [Google Maps](https://console.cloud.google.com/) "Enabling the Specific Services: Maps Javascript API & Places API"
+* [Travel Advisor (Rapid API)](https://rapidapi.com/apidojo/api/travel-advisor/)
+
+Create a `.env` file in your root directory, create the variables as seen below filling in your API Keys appropriately
+>>>>>>> ec29f42412cb1698f3e2a7ab8724f1d0703a7439
 ```sh
 VITE_TRAVEL_API_KEY=TRAVEL-ADVISOR-APIKEY-HERE
 VITE_GOOGLE_MAP_API_KEY=GOOGLE-MAP-APIKEY-HERE
@@ -48,4 +69,8 @@ Your project should start running on `http://localhost:3000`
 
 ## Show your support
 
+<<<<<<< HEAD
 Give a ⭐️ if this project helped you!
+=======
+Give a ⭐️ if this project helped you!
+>>>>>>> ec29f42412cb1698f3e2a7ab8724f1d0703a7439
