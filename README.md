@@ -11,7 +11,6 @@ A ReactJS TripAdvisor Clone Web App made with the RapidAPI's TravelAdvisor API a
   </a>
 </p>
 
-
 ### ✨ [Live Preview](https://traveladvisor-bey.netlify.app/)
 
 ## Install
