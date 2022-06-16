@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { MainContext } from "../../context/MainContext";
 
 const Filter = () => {
+    // Bringing Neccesary states from the Main Conttext
     const { type, setType, rating, setRating } = useContext(MainContext);
 
     return ( 
@@ -15,6 +16,8 @@ const Filter = () => {
                 </h2>
                 <div className="w-full space-y-1 font-medium">
                     <p>Place Type</p>
+                    
+                    {/* Select Field for Rating that Set new Place Type state value */}
                     <select 
                         value={type} 
                         onChange={(e) => {setType(e.target.value)}}
@@ -24,9 +27,12 @@ const Filter = () => {
                         <option value="hotels">Hotels</option>
                         <option value="attractions">Attractions</option>
                     </select>
+                    {/* --- */}
                 </div>
                 <div className="w-full space-y-1 font-medium">
                     <p>Rating</p>
+                    
+                    {/* Select Field for Rating that Set new Rating state value */}
                     <select 
                         value={rating} 
                         onChange={(e) => {setRating(e.target.value)}}
@@ -37,6 +43,7 @@ const Filter = () => {
                         <option value={4}>Above 4.0</option>
                         <option value={4.5}>Above 4.5</option>
                     </select>
+                    {/* --- */}
                 </div>
             </div>
         </div>

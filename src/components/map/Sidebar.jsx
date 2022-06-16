@@ -37,6 +37,7 @@ const Sidebar = ({ places }) => {
             </div>
             <div className="px-2 pt-2 pb-20 md:pb-2">
                 { isLoading && <Loader /> }
+                
                 { !isLoading && places?.map((place, i) => (
                     <PlaceDetails key={i} place={place} />
                 )) }
