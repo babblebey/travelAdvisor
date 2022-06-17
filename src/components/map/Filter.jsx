@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { MainContext } from "../../context/MainContext";
 
 const Filter = () => {
-    // Bringing Neccesary states from the Main Conttext
+    // Bringing Neccesary states from the Main Context
     const { type, setType, rating, setRating } = useContext(MainContext);
 
     return ( 

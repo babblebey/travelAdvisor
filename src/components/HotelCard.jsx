@@ -10,7 +10,7 @@ const HotelCard = ({ hotel }) => {
             {/* Hotel Image */}
             <div className="col-span-12 mmd:col-span-4 min-h-[180px] max-h-[230px]">
                 <Link to={`hotels/${hotel?.location_id}`}>
-                    <img src={ hotel.photo ? hotel.photo.images.large.url : 'https://media-cdn.tripadvisor.com/media/photo-s/22/d9/7b/42/this-image-has-been-removed.jpg'} alt="" 
+                    <img src={ hotel?.photo ? hotel?.photo?.images?.large?.url : 'https://media-cdn.tripadvisor.com/media/photo-s/22/d9/7b/42/this-image-has-been-removed.jpg'} alt="" 
                         className=" w-full h-full object-cover cursor-pointer"
                     />
                 </Link>
@@ -69,7 +69,7 @@ const HotelCard = ({ hotel }) => {
 
                         {/* Offer Booking Link */}
                         <a target="_blank" className="block"
-                            href={ (hotel.hac_offers.all_booking_offers.length > 0) ? ( 
+                            href={ (hotel?.hac_offers?.all_booking_offers?.length > 0) ? ( 
                                 hotel?.hac_offers?.all_booking_offers[0]?.link 
                             ) : ( 
                                 hotel?.hac_offers?.offers[0]?.link
