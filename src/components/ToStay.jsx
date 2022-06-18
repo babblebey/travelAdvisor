@@ -63,6 +63,7 @@ const ToStay = () => {
                         >
                             {/* Mapping through the Places Object, a place card is rendered for each data */}
                             {places?.map((place, index) => (
+                                // Place card receives each place as prop
                                 <PlaceCard key={index} place={place} type="hotels" />
                             ))}
                             {/* --- */}

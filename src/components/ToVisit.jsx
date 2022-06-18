@@ -6,6 +6,7 @@ import PlaceCard from "./PlaceCard";
 import { PlaceCardLoader } from "./loaders";
 import { MainContext } from "../context/MainContext";
 
+// OwlCarousel Responsive Options
 const responsive = {
     0: {
         items: 1,
@@ -26,12 +27,16 @@ const responsive = {
 }
 
 const ToVisit = () => {
+    // Bringing the Attraction state from the Main context and saved into variable name 'places'
     const { attractions: places  } = useContext(MainContext);
+    
     return ( 
         <>
             {!places ? (
+                // if places list is empty, render a Loader
                 <PlaceCardLoader />
             ) : (
+                // Places are ready, hence the element below is render
                 <div className="container mx-auto p-4">
                     <h2 className="font-semibold text-lg md:text-2xl">
                         Place to Visit
@@ -40,6 +45,7 @@ const ToVisit = () => {
                         These are some places you might want to visit
                     </p>
 
+                    {/* OwlCarousel to Render Places in Carousel */}
                     <div className="relative -left-[20px]">
                         <OwlCarousel nav stagePadding={20} 
                             navClass={["navStyle", "navStyle"]} 
@@ -54,11 +60,15 @@ const ToVisit = () => {
                                 </svg>`
                             ]}
                         >
+                            {/* Mapping through the Places Object, a place card is rendered for each data */}
                             {places?.map((place, index) => (
+                                // Place card receives each place as prop
                                 <PlaceCard key={index} place={place} type="attractions" />
                             ))}
+                            {/* --- */}
                         </OwlCarousel>
                     </div>
+                    {/* --- */}
                 </div>
             )}
         </>
