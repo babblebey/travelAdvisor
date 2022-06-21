@@ -1,5 +1,6 @@
 import axios from "axios";
 
+// Get places by bounds receives the 'type', 'sw' object, 'ne'object and 'source' for effect cancellation as parameter for endpoint call
 export const getPlacesByBounds = async (type, sw, ne, source) => {
     try {
         const { data: { data } } = await axios.get(`https://travel-advisor.p.rapidapi.com/${type}/list-in-boundary`, {
@@ -14,8 +15,12 @@ export const getPlacesByBounds = async (type, sw, ne, source) => {
             'X-RapidAPI-Key': import.meta.env.VITE_TRAVEL_API_KEY
           }
         }, { cancelToken: source.token });
+
+        // Data is returned once resolved
         return data;
+
     } catch (error) {
+        // Error Handling
         if (axios.isCancel(error)) {
           console.log('axios Call Cancelled!');
         } else {
@@ -24,6 +29,7 @@ export const getPlacesByBounds = async (type, sw, ne, source) => {
     }
 }
 
+// Get Places by Latitude and longitude, receives 'type', 'lat', 'lng', some 'params' and source for effect cleanup and error handling as parameter to endpoint call
 export const getPlacesByLatLng = async (type, lat, lng, params, source) => {
   try {
     const { data: { data } } = await axios.get(`https://travel-advisor.p.rapidapi.com/${type}/list-by-latlng`, {
@@ -37,6 +43,9 @@ export const getPlacesByLatLng = async (type, lat, lng, params, source) => {
         'X-RapidAPI-Key': import.meta.env.VITE_TRAVEL_API_KEY
       }
     }, { cancelToken: source.token });
+
+    // Data is returned once resolved
+    console.log(data);
     return data;
   } catch (error) {
     if (axios.isCancel(error)){
@@ -47,6 +56,7 @@ export const getPlacesByLatLng = async (type, lat, lng, params, source) => {
   }
 }
 
+// Get Place details RTCRtpReceiver, 'type', 'location_id' and 'source' as paramter to endpoint call
 export const getPlaceDetails = async (type, location_id, source) => {
   try {
     const { data } = await axios.get(`https://travel-advisor.p.rapidapi.com/${type}/get-details`, {
@@ -58,6 +68,8 @@ export const getPlaceDetails = async (type, location_id, source) => {
         'X-RapidAPI-Key': import.meta.env.VITE_TRAVEL_API_KEY
       }
     }, { cancelToken: source.token });
+
+    // Data is returned once resolved
     return data;
   } catch (error) {
     if (axios.isCancel(error)){
@@ -68,6 +80,7 @@ export const getPlaceDetails = async (type, location_id, source) => {
   }
 }
 
+// Get Place Review received the 'location_id' and 'source' as paramters for endpoint call
 export const getPlaceReviews = async (location_id, source) => {
   try {
     const { data: { data } } = await axios.get(`https://travel-advisor.p.rapidapi.com/reviews/list`, {
@@ -80,6 +93,8 @@ export const getPlaceReviews = async (location_id, source) => {
         'X-RapidAPI-Key': import.meta.env.VITE_TRAVEL_API_KEY
       }
     }, { cancelToken: source.token });
+
+    // Data is returned once resolved
     return data;
   } catch (error) {
     if(axios.isCancel(error)) {
@@ -90,26 +105,7 @@ export const getPlaceReviews = async (location_id, source) => {
   }
 }
 
-export const getPlacePhotos = async (location_id, count = 10) => {
-  const abortControl = new AbortController();
-  try {
-    const { data: { data } } = await axios.get('https://travel-advisor.p.rapidapi.com/photos/list', {
-      params: {
-        location_id: location_id,
-        limit: count
-      },
-      headers: {
-        'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com',
-        'X-RapidAPI-Key': import.meta.env.VITE_TRAVEL_API_KEY
-      }
-    }, { signal: abortControl.signal })
-    return data;
-  } catch (error) {
-    console.error(error)
-    abortControl.abort()
-  }
-}
-
+// Search Place recieves 'location', some 'params' and 'source' as a parameters for endpoint call
 export const searchPlaces = async (location, params, source) => {
   try {
     const { data: { data } } = await axios.get('https://travel-advisor.p.rapidapi.com/locations/search', {
@@ -122,6 +118,8 @@ export const searchPlaces = async (location, params, source) => {
         'X-RapidAPI-Key': import.meta.env.VITE_TRAVEL_API_KEY
       }
     }, { cancelToken: source.token })
+
+    // Data is returned once resolved
     return data;
   } catch (error) {
     if (axios.isCancel(error)) {

@@ -6,8 +6,13 @@ const WhereTo = () => {
     const [term, setTerm] = useState('');
     const history = useHistory();
 
+    // Form submit handler function - fires on submit
     const handleSubmit = (e) => {
+        // Prevent form from reloading page
         e.preventDefault();
+
+        // Route to the search Result page
+        // ...passing the form search 'term' state value as url parameter to be received on search result component
         history.push(`/search?location=${term}`);
     }
 
@@ -16,6 +21,7 @@ const WhereTo = () => {
             <img src={wheretoImg} alt="BG" 
                 className="object-cover md:w-full md:h-[22em] h-[20em]" 
             />
+            {/* Search Input Field */}
             <div className="absolute w-[85%] md:w-10/12">
                 <form className="relative" onSubmit={handleSubmit}>
                     <svg className="h-6 w-6 absolute left-3 top-1/4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -26,10 +32,12 @@ const WhereTo = () => {
                         placeholder="Where to?"
                         className="bg-white rounded-full w-full pl-12 py-3 shadow-xl focus:outline-none" 
                         value={term}
+                        // Update form state value onChange of input
                         onChange={e => setTerm(e.target.value)}
                     />
                 </form>
             </div>
+            {/* --- */}
         </div>
      );
 }
