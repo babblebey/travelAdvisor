@@ -32,7 +32,7 @@ const ToVisit = () => {
     
     return ( 
         <>
-            {!places ? (
+            { places?.length < 1 ? (
                 // if places list is empty, render a Loader
                 <PlaceCardLoader />
             ) : (

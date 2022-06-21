@@ -29,11 +29,10 @@ const responsive = {
 const ToStay = () => {
     // Bringing the hotels state from the Main context and saved into variable name 'places'
     const { hotels: places  } = useContext(MainContext);
-    console.log(places);
 
     return ( 
         <>
-            {!places ? (
+            {places?.length < 1 ? (
                 // if places list is empty, render a Loader
                 <PlaceCardLoader />
             ) : (
