@@ -62,7 +62,7 @@ const PlaceDetails = ({ place }) => {
                     ) }
                     {/* --- */}
 
-                    {/* Place Price, Displays if price is found in place info */}
+                    {/* Place Price, Displays if price is found in place details */}
                     { place?.price  && (
                         <button className="bg-yellow-400 rounded-full py-1 px-3 m-2 shadow-md">
                             <p className="text-sm flex items-center">
@@ -130,7 +130,7 @@ const PlaceDetails = ({ place }) => {
                         </p>
 
                         <div className="text-sm flex flex-wrap items-center my-2 leading-relaxed">
-                            {/* Place address - displays only if found in place info */}
+                            {/* Place address - displays only if found in place details */}
                             { place?.address && (
                                 <p className="flex items-center mr-2">
                                     <svg className="h-5 w-5 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -141,7 +141,7 @@ const PlaceDetails = ({ place }) => {
                             ) }
                             {/* --- */}
                             
-                            {/* Place phone - displays only if found in place info */}
+                            {/* Place phone - displays only if found in place details */}
                             { place?.phone && (
                                 <p className="hidden md:flex items-center mr-2">
                                     <svg className="h-5 w-5 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -157,7 +157,7 @@ const PlaceDetails = ({ place }) => {
                             ) }
                             {/* --- */}
 
-                            {/* Place email - displays only if found in place info */}
+                            {/* Place email - displays only if found in place details */}
                             { place?.email && (
                                 <p className="hidden md:flex items-center mr-2">
                                     <svg className="h-5 w-5 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -177,7 +177,7 @@ const PlaceDetails = ({ place }) => {
                                 </p>
                             ) }
 
-                            {/* Place website - displays only if found in place info */}
+                            {/* Place website - displays only if found in place details */}
                             { place?.website && (
                                 <p className="hidden md:flex items-center mr-2">
                                     <svg className="h-5 w-5 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -216,7 +216,7 @@ const PlaceDetails = ({ place }) => {
                         ) }
                         {/* --- */}
 
-                        {/* Place Price - displays only if found in place info  */}
+                        {/* Place Price - displays only if found in place details  */}
                         { place?.price  && (
                             <button className="bg-yellow-400 rounded-full py-1 px-3 my-2 mr-2">
                                 <p className="text-sm flex items-center">
@@ -229,7 +229,7 @@ const PlaceDetails = ({ place }) => {
                         ) }
                         {/* --- */}
 
-                        {/* Place Photo - displays only if found in place info else a default photo is displayed as fallback  */}
+                        {/* Place Photo - displays only if found in place details else a default photo is displayed as fallback  */}
                         <img 
                             src={place?.photo ? place?.photo?.images?.original?.url : 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/f7/49/68/hotel-bon-voyage.jpg?w=200&h=-1&s=1'} 
                             className="w-full h-[300px] object-cover rounded-t md:rounded my-2"
@@ -239,7 +239,7 @@ const PlaceDetails = ({ place }) => {
                         {/* A Mobile Only Section - Diplays if either of Place Email, Phone or Website is found */}
                         { ( place?.phone || place?.email || place?.website ) && (
                             <div className="flex bg-white shadow-sm rounded-b p-2 md:hidden border border-t-0 mb-2">
-                                {/* Place phone - displays only if found in place info  */}
+                                {/* Place phone - displays only if found in place details  */}
                                 { place?.phone && (
                                     <p className="flex flex-col items-center justify-center w-full">
                                         <svg className="h-7 w-7 mx-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -255,7 +255,7 @@ const PlaceDetails = ({ place }) => {
                                 ) }
                                 {/* --- */}
 
-                                {/* Place email - displays only if found in place info  */}
+                                {/* Place email - displays only if found in place details  */}
                                 { place?.email && (
                                     <p className="flex flex-col items-center justify-center w-full">
                                         <svg className="h-7 w-7 mx-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -272,7 +272,7 @@ const PlaceDetails = ({ place }) => {
                                 ) }
                                 {/* --- */}
 
-                                {/* Place website - displays only if found in place info  */}
+                                {/* Place website - displays only if found in place details  */}
                                 { place?.website && (
                                     <p className="flex flex-col items-center justify-center w-full">
                                         <svg className="h-7 w-7 mx-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -297,7 +297,7 @@ const PlaceDetails = ({ place }) => {
                         {/* --- */}
 
                         <div className="md:grid grid-cols-1 md:grid-cols-3 gap-2 pb-10">
-                            {/* Place description section - displays only if found in place info  */}
+                            {/* Place description section - displays only if found in place details  */}
                             <div className="col-span-3">
                                 {place?.description && (
                                     <>
@@ -312,14 +312,14 @@ const PlaceDetails = ({ place }) => {
                             </div>
                             {/* --- */}
 
-                            {/* Section displays If either awards, rating or ranking is found in place info */}
+                            {/* Section displays If either awards, rating or ranking is found in place details */}
                             {(place?.awards?.length > 0 || place?.rating > 0 || place?.ranking ) && (
                                 <div className="col-span-1 bg-white border border-gray-200 p-4 my-1 mx-0 md:my-2 shadow-sm space-y-3 md:space-y-4">
                                     <h2 className="font-medium text-lg">
                                        Ratings & Recognitions
                                     </h2>
 
-                                    {/* Place Rating with 'place.rating' value passed to generate a React Stars Rating element - displays only if found in place info  */}
+                                    {/* Place Rating with 'place.rating' value passed to generate a React Stars Rating element - displays only if found in place details  */}
                                     {(place?.rating > 0 ) && ( 
                                         <p className="my-2 flex items-center text-sm">
                                             <span className="font-semibold text-xl">{ place.rating }</span> 
@@ -335,7 +335,7 @@ const PlaceDetails = ({ place }) => {
                                     )}
                                     {/* --- */}
                                     
-                                    {/* Place ranking - displays only if found in place info */}
+                                    {/* Place ranking - displays only if found in place details */}
                                     {place?.ranking && (
                                         <p className="my-2 text-sm">
                                             { place?.ranking }
@@ -355,6 +355,7 @@ const PlaceDetails = ({ place }) => {
                                                         <div className="flex flex-wrap items-center bg-white border border-gray-200 shadow-md rounded-md p-2 mr-2 mb-2">
                                                             {/* Award Image */}
                                                             <img src={award?.images?.small} />
+                                                            {/* --- */}
 
                                                             {/* Award display name - Hidden on desktop (Large devices) but display on Mobile */}
                                                             <p className="ml-2 md:hidden">{ award?.display_name}</p>
@@ -376,7 +377,7 @@ const PlaceDetails = ({ place }) => {
                                 </div>
                             )}  
                     
-                            {/* Section display only if either cusine or diet restriction is found in place info */}
+                            {/* Cuisines/Special Diets - Section display only if either cusine or diet restriction is found in place details */}
                             {(place?.cuisine || place?.dietary_restrictions) && (
                                 <div className="col-span-1 bg-white border border-gray-200 p-4 my-1 mx-0 md:my-2 shadow-sm space-y-3 md:space-y-4">
                                     <h2 className="font-medium text-lg">
@@ -431,7 +432,7 @@ const PlaceDetails = ({ place }) => {
                                         Contact Details
                                     </h2>
 
-                                    {/* Place address - displays only if found in place info */}
+                                    {/* Place address - displays only if found in place details */}
                                     { place?.address && (
                                         <p className="flex items-start mr-2 text-sm">
                                             <div className="w-1/12">
@@ -444,7 +445,7 @@ const PlaceDetails = ({ place }) => {
                                     ) }
                                     {/* --- */}
                                     
-                                    {/* Place phone - displays only if found in place info */}
+                                    {/* Place phone - displays only if found in place details */}
                                     { place?.phone && (
                                         <p className="flex items-center mr-2 text-sm">
                                             <div className="w-1/12">
@@ -462,7 +463,7 @@ const PlaceDetails = ({ place }) => {
                                     ) }
                                     {/* --- */}
 
-                                    {/* Place email - displays only if found in place info */}
+                                    {/* Place email - displays only if found in place details */}
                                     { place?.email && (
                                         <p className="flex items-center mr-2 text-sm">
                                             <div className="w-1/12">
@@ -485,7 +486,7 @@ const PlaceDetails = ({ place }) => {
                                     ) }
                                     {/* --- */}
 
-                                    {/* Place website - displays only if found in place info */}
+                                    {/* Place website - displays only if found in place details */}
                                     { place?.website && (
                                         <p className="flex items-center mr-2 text-sm">
                                             <div className="w-1/12">
