@@ -11,7 +11,7 @@ const AttractionsList = () => {
     const { coordinates, isLoading, setIsLoading } = useContext(MainContext);
     const [attractions, setAttractions] = useState();
 
-    // Effect to fetch list of places for component from the getPlacesByLatLng endpoint and effect is reran on change of cordinates 
+    // Effect to fetch list of places for component from the getPlacesByLatLng endpoint and effect is reran on change of coordinates 
     useEffect(() => {
         let source = axios.CancelToken.source();
 
