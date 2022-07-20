@@ -32,7 +32,7 @@ const ToEat = () => {
     
     return ( 
         <>
-            { places?.length < 1 ? (
+            { !places || places?.length < 1 ? (
                 // if places list is empty, render a Loader
                 <PlaceCardLoader />
             ) : (
